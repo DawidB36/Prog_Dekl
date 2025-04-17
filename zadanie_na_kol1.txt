@@ -1,0 +1,43 @@
+anna - stała
+zmienna4 - stała
+_waga - zmienna
+Miara - zmienna
+ola_malinowska - stała
+Dziecko(X) - wyrażenie błędne (duża litera)
+and(kwadrat(x),mnożymy(x)) - term złożony
+adam kowalski - wyrażenie błedne (spacja)
+
+-----------------------------------------------------------
+
+[X|T]	[a]
+X=a
+T=[]
+
+[[1,2]]	[X,Y|T]
+nie da się uzgodnić (rózna ilość elementów)
+
+[X,Y,a,b,C]	[a,b|[D,b,a]]
+X = a	D=a
+Y = b	C=a
+
+----------------------------------------------------------
+
+%lista_wiekszao1(L1,L2) - spełniona gdy każdy element listy L1 jest większy o 1 od listy L2
+lista_wiekszao1([],[]).
+lista_wiekszao1([H1|T1],[H2|T2]):-H1 is H2 + 1, lista_wiekszao1(T1,T2).
+
+-----------------------------------------------------------
+
+lubi(marcin, gitara).
+lubi(magda, ksiazki).
+lubi(piotr, gitara).
+lubi(ola, sport).
+lubi(ania, X):-lubi(magda, X).
+hobby(X,Y):-lubi(X,Z),lubi(Y,Z).
+
+% 6 kaluzul, 4 fakty, 2 reguły, 2 definicja relacji
+
+?- lubi(X,gitara).
+?- lubi(magda,X).
+?- lubi(_,ksziazki).
+?- hobby(magda,marcin).
