@@ -1,0 +1,5 @@
+[X|T]		[[1]]
+[X,Y|T]		[b]
+[X,Y|T]		[ania,basia]
+[H|[H2|T]]	[1,2,3]
+[X,Y,a,b,C]	[a,b|[D,X,a]]
